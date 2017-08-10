@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+#box{
+	width:1100px;
+	height:1600px;
+	font-family: iconfontwbd;
+    font-size: 16px;
+    font-style: normal;
+}
+#head{
+	width:100%;
+	padding:0 0 0 80px;
+}
+#con{
+	width:920px;
+	padding-top:80px;
+	margin:auto;
+}
+.img{
+	float:left;
+	width:56px;
+	height:45px;
+}
+span div {
+	font-size:18px;
+	font-weight:bold;
+	color:#FFF;
+    display: inline-block;
+    background: #4e7282 url(imges/span1.png) no-repeat top right;
+    height:31px;
+    line-height:30px;
+    border:none;
+    padding-right:60px;
+	float:left;
+}
+#inf{
+	margin:30px 0 0 27px;
+	width:100%;
+	height:230px;
+	border-left:2px solid #066;
+	border-top:2px solid #066;
+}
+.tion2{
+	width:370px;
+	height:26px;
+	margin:26px 0 0 76px;
+	float:left;
+}	
+.tion{
+	width:370px;
+	height:26px;
+	margin:26px 0 0 50px;
+	float:left;
+}	
+#education{
+	margin:30px 0 0 27px;
+	width:100%;
+	height:230px;
+	border-left:2px solid #066;
+	border-top:2px solid #066;
+}
+#experience{
+	margin:30px 0 0 27px;
+	width:100%;
+	height:300px;
+	border-left:2px solid #066;
+	border-top:2px solid #066;
+}
+#skills{
+	margin:30px 0 0 27px;
+	width:100%;
+	height:200px;
+	border-left:2px solid #066;
+	border-top:2px solid #066;
+}
+#self{
+	margin:30px 0 0 27px;
+	width:100%;
+	height:200px;
+	border-left:2px solid #066;
+	border-top:2px solid #066;
+}
+#footer{
+	text-align:center;
+}
