@@ -43,18 +43,20 @@ public class BriefServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		if (op != null && op.equals("Allbrief")) {
+
 			List<Brief> list = bdao.findall();
 			DEFAUT_PAGE = "/brief/Allbrief.jsp";
 			request.setAttribute("list", list);
 			out.print(list.toString());
+
 		} else if (op != null && op.equals("Allbrief2")) {
 			List<Brief> list = bdao.findall();
 			DEFAUT_PAGE = "/brief/Allbrief2.jsp";
 			request.setAttribute("list", list);
 			out.print(list.toString());
-		}
 
-		else if (op != null && op.equals("viewbrief")) {
+		} else if (op != null && op.equals("viewbrief")) {
+
 			int id = Integer.parseInt(request.getParameter("Bid"));
 			brief = bdao.findById(id);
 			DEFAUT_PAGE = "/brief/brief.jsp";
