@@ -85,7 +85,7 @@
 					%>
 					<tr
 						style="font-weight: normal; font-style: normal; backround-color: white; text-decoratton: none">
-						<td colspan="4" a="1">
+						<td colspan="4">
 							<form name="fenye" method="get" action="">
 								<p align="center">
 									<font size=2> <a

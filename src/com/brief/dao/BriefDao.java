@@ -63,15 +63,15 @@ public class BriefDao {
 				+ brief.getZzmm() + "',QQ='" + brief.getQQ() + "',height='" + brief.getHeight() + "',education='"
 				+ brief.getEducation() + "',experience='" + brief.getExperience() + "',skills='" + brief.getSkills()
 				+ "',self='" + brief.getSelf() + "' where Bid=" + brief.getBid();
-		 System.out.println(sql);
-		 try {
-			 int result = conn.doUpdate(sql);
-			 return result;
-		 }catch(Exception e) {
-			 e.printStackTrace();
-		 }finally {
-			 conn.closeConnection();
-		 }
+		System.out.println(sql);
+		try {
+			int result = conn.doUpdate(sql);
+			return result;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			conn.closeConnection();
+		}
 		return 0;
 	}
 

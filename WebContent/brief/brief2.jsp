@@ -14,65 +14,82 @@
 %>
 </head>
 <body>
- <form id=form1 name="form1"  action="BriefServlet?op=update&id=<%=id %>" method=post enctype="multipart/form-data">
-	<%=request.getAttribute("msg") != null ? request.getAttribute("msg") : ""%>
+	<form id=form1 name="form1" action="BriefServlet?op=update&id=<%=id%>"
+		method="post">
+		<%=request.getAttribute("msg") != null ? request.getAttribute("msg") : ""%>
 
-	<div id="box">
-		<div id="haed">
-			<img src="imges/head.png" width="1100" height="172" />
-		</div>
-		<div id="con">
-			<div class="img">
-				<img src="imges/dt_bg.png" width="184" height="45" />
+		<div id="box">
+			<div id="haed">
+				<img src="imges/head.png" width="1100" height="172" />
 			</div>
-			<%-- <input type="hidden" name=id value=<%=recipes.getRtitle() %> /> --%>
+			<div id="con">
+				<div class="img">
+					<img src="imges/dt_bg.png" width="184" height="45" />
+				</div>
 
-			<span><div>个人信息</div></span>
-			<div id="inf">
-				<div id="name" class="tion" contenteditable="true">
-					姓名：<%=b.getName()%></div>
-				<div id="target" class="tion" contenteditable="true">
-					求职目标：<%=b.getTarget()%></div>
-				<div id="call" class="tion2" contenteditable="true">
-					电 话：<%=b.getCall()%></div>
-				<div id="age" class="tion" contenteditable="true">
-					年龄：<%=b.getAge()%></div>
-				<div id="email" class="tion2" contenteditable="true">
-					邮箱：<%=b.getEmail()%></div>
-				<div id="zzmm" class="tion" contenteditable="true">
-					政治面貌：<%=b.getZzmm()%></div>
-				<div id="QQ" class="tion2" contenteditable="true">
-					QQ：<%=b.getQQ()%></div>
-				<div id="height" class="tion" contenteditable="true">
-					身高：<%=b.getHeight()%></div>
+
+				<span><div>个人信息</div></span>
+				<div id="inf">
+					<div id="name" class="tion" contenteditable="true">
+						姓名：<input name="name" value="<%=b.getName()%>">
+					</div>
+					<div id="target" class="tion" contenteditable="true">
+						求职目标：<input name="target" value="<%=b.getTarget()%>">
+					</div>
+					<div id="call" class="tion2" contenteditable="true">
+						电 话：<input name="call" value="<%=b.getCall()%>">
+					</div>
+					<div id="age" class="tion" contenteditable="true">
+						年龄：<input name="age" value="<%=b.getAge()%>">
+					</div>
+					<div id="email" class="tion2" contenteditable="true">
+						邮箱：<input name="email" value="<%=b.getEmail()%>">
+					</div>
+					<div id="zzmm" class="tion" contenteditable="true">
+						政治面貌：<input name="zzmm" value="<%=b.getZzmm()%>">
+					</div>
+					<div id="QQ" class="tion2" contenteditable="true">
+						QQ：<input name="QQ" value="<%=b.getQQ()%>">
+					</div>
+					<div id="height" class="tion" contenteditable="true">
+						身高：<input name="height" value="<%=b.getHeight()%>">
+					</div>
+				</div>
+				<div class="img">
+					<img src="imges/dt_bg.png" width="184" height="45" />
+				</div>
+				<span><div>教育背景</div></span>
+				<div id="education" contenteditable="true">
+					<input name="education" value="<%=b.getEducation()%>">
+				</div>
+				<div class="img">
+					<img src="imges/dt_bg.png" width="184" height="45" />
+				</div>
+				<span><div>项目经验</div></span>
+				<div id="experience" contenteditable="true">
+					<input name="experience" value="<%=b.getExperience()%>">
+				</div>
+				<div class="img">
+					<img src="imges/dt_bg.png" width="184" height="45" />
+				</div>
+				<span><div>个人技能</div></span>
+				<div id="skills" contenteditable="true">
+					<input name="skills" value="<%=b.getSkills()%>">
+				</div>
+				<div class="img">
+					<img src="imges/dt_bg.png" width="184" height="45" />
+				</div>
+				<span><div>自我评价</div></span>
+				<div id="self" contenteditable="true">
+					<input name="self" value="<%=b.getSelf()%>">
+				</div>
 			</div>
-			<div class="img">
-				<img src="imges/dt_bg.png" width="184" height="45" />
+			<div id="footer">
+				<input class="button" type="submit" value="保存" /> <a
+					href="Allbrief2.jsp"> <input name="check" type="submit"
+					value="查看所有" onclick="window.location.href('Allbrief2.jsp')" /></a>
 			</div>
-			<span><div>教育背景</div></span>
-			<div id="education" contenteditable="true"><%=b.getEducation()%></div>
-			<div class="img">
-				<img src="imges/dt_bg.png" width="184" height="45" />
-			</div>
-			<span><div>项目经验</div></span>
-			<div id="experience" contenteditable="true"><%=b.getExperience()%></div>
-			<div class="img">
-				<img src="imges/dt_bg.png" width="184" height="45" />
-			</div>
-			<span><div>个人技能</div></span>
-			<div id="skills" contenteditable="true"><%=b.getSkills()%></div>
-			<div class="img">
-				<img src="imges/dt_bg.png" width="184" height="45" />
-			</div>
-			<span><div>自我评价</div></span>
-			<div id="self" contenteditable="true"><%=b.getSelf()%></div>
 		</div>
-		<div id="footer">
-			<input class="button" type="submit" value="保存" /> 
-			<a href="Allbrief2.jsp">
-			<input name="check" type="submit" value="查看所有" onclick="window.location.href('Allbrief2.jsp')" /></a>
-		</div>
-	</div>
-   </form>
+	</form>
 </body>
 </html>

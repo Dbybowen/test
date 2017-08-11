@@ -21,7 +21,7 @@
 			if (id == null) {
 				response.sendRedirect("BriefServlet?op=viewbrief");
 				return;
-			} 
+			}
 		%>
 
 		<div id="haed">
@@ -31,7 +31,6 @@
 			<div class="img">
 				<img src="imges/dt_bg.png" width="184" height="45" />
 			</div>
-			<%-- <input type="hidden" name=id value=<%=recipes.getRtitle() %> /> --%>
 
 			<span><div>个人信息</div></span>
 			<div id="inf">
@@ -74,9 +73,9 @@
 			<div id="self" contenteditable="true"><%=b.getSelf()%></div>
 		</div>
 		<div id="footer">
-	
-			<a href="Allbrief2.jsp">
-			<input name="check" type="submit" value="查看所有" onclick="window.location.href('Allbrief2.jsp')" /></a>
+
+			<a href="Allbrief2.jsp"> <input name="check" type="submit"
+				value="查看所有" onclick="window.location.href('Allbrief2.jsp')" /></a>
 		</div>
 	</div>
 
