@@ -24,7 +24,7 @@ public class BriefServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	String defaultPage = "/brief/brief.jsp";
+	static String DEFAUT_PAGE = "/brief/brief.jsp";
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -44,12 +44,12 @@ public class BriefServlet extends HttpServlet {
 
 		if (op != null && op.equals("Allbrief")) {
 			List<Brief> list = bdao.findall();
-			defaultPage = "/brief/Allbrief.jsp";
+			DEFAUT_PAGE = "/brief/Allbrief.jsp";
 			request.setAttribute("list", list);
 			out.print(list.toString());
 		} else if (op != null && op.equals("Allbrief2")) {
 			List<Brief> list = bdao.findall();
-			defaultPage = "/brief/Allbrief2.jsp";
+			DEFAUT_PAGE = "/brief/Allbrief2.jsp";
 			request.setAttribute("list", list);
 			out.print(list.toString());
 		}
@@ -57,7 +57,7 @@ public class BriefServlet extends HttpServlet {
 		else if (op != null && op.equals("viewbrief")) {
 			int id = Integer.parseInt(request.getParameter("Bid"));
 			brief = bdao.findById(id);
-			defaultPage = "/brief/brief.jsp";
+			DEFAUT_PAGE = "/brief/brief.jsp";
 			request.setAttribute("brief", brief);
 
 		} else if (op != null && op.equals("update")) {
@@ -83,16 +83,16 @@ public class BriefServlet extends HttpServlet {
 
 			if (id != null) {
 				if (bdao.update(brief) == 1) {
-					defaultPage = "/brief/Allbrief.jsp";
+					DEFAUT_PAGE = "/brief/Allbrief.jsp";
 					request.setAttribute("msg", "保存成功！");
 				} else {
-					defaultPage = "/brief/brief2.jsp";
+					DEFAUT_PAGE = "/brief/brief2.jsp";
 					request.setAttribute("msg", "保存失败！请重试！！");
 				}
 			}
 		}
 
-		System.out.print(defaultPage.toString());
-		getServletContext().getRequestDispatcher(defaultPage).forward(request, response);
+		System.out.print(DEFAUT_PAGE.toString());
+		getServletContext().getRequestDispatcher(DEFAUT_PAGE).forward(request, response);
 	}
 }
