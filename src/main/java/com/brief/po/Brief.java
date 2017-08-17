@@ -17,7 +17,6 @@ public class Brief {
 	private String self;
 
 	public Brief() {
-
 	}
 
 	public Brief(Integer Bid, String name, String target, String call, String age, String email, String zzmm, String QQ,

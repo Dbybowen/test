@@ -43,20 +43,18 @@ public class BriefServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		if (op != null && op.equals("Allbrief")) {
-
 			List<Brief> list = bdao.findall();
-			DEFAUT_PAGE = "/brief/Allbrief.jsp";
+			DEFAUT_PAGE = "/brief/allBrief.jsp";
 			request.setAttribute("list", list);
 			out.print(list.toString());
 
 		} else if (op != null && op.equals("Allbrief2")) {
 			List<Brief> list = bdao.findall();
-			DEFAUT_PAGE = "/brief/Allbrief2.jsp";
+			DEFAUT_PAGE = "/brief/index.jsp";
 			request.setAttribute("list", list);
 			out.print(list.toString());
 
 		} else if (op != null && op.equals("viewbrief")) {
-
 			int id = Integer.parseInt(request.getParameter("Bid"));
 			brief = bdao.findById(id);
 			DEFAUT_PAGE = "/brief/brief.jsp";
@@ -85,7 +83,7 @@ public class BriefServlet extends HttpServlet {
 
 			if (id != null) {
 				if (bdao.update(brief) == 1) {
-					DEFAUT_PAGE = "/brief/Allbrief.jsp";
+					DEFAUT_PAGE = "/brief/allBrief.jsp";
 					request.setAttribute("msg", "保存成功！");
 				} else {
 					DEFAUT_PAGE = "/brief/brief2.jsp";

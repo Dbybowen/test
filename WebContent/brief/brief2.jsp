@@ -85,11 +85,12 @@
 				</div>
 			</div>
 			<div id="footer">
-				<input class="button" type="submit" value="保存" /> <a
-					href="Allbrief2.jsp"> <input name="check" type="submit"
-					value="查看所有" onclick="window.location.href('Allbrief2.jsp')" /></a>
-			</div>
-		</div>
+				<input class="button" type="submit" value="保存" />
 	</form>
+	<a href="Allbrief2.jsp"> <input name="check" type="submit"
+		value="查看所有" onclick="window.location.href('Allbrief2.jsp')" /></a>
+	</div>
+	</div>
+
 </body>
 </html>
